@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>北京瑄鹏生物科技有限公司 | 化合物检测 · 合成制备 · 制剂开发</title>
+  <meta name="description" content="北京瑄鹏生物科技有限公司：化合物结构检测解析鉴定、纯度含量TGA DSC元素杂质XRD检测、医药化学中间体与杂质对照品制备、合成路线设计与工艺优化、高技术壁垒仿制药及复杂制剂开发。价格同类超低，服务质量最高！联系电话18801355849。" />
+  <style>
+    :root {
+      --primary: #0b6b5c;
+      --primary-dark: #075046;
+      --accent: #17a78f;
+      --bg: #f5f9f8;
+      --text: #1f2a2e;
+      --muted: #5f6f73;
+      --white: #ffffff;
+      --border: #dfeae7;
+      --shadow: 0 8px 28px rgba(11, 107, 92, 0.10);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "PingFang SC", system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 17px;
+      color: var(--primary-dark);
+      letter-spacing: .3px;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      font-size: 15px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+
+    .nav-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 800;
+      white-space: nowrap;
+      transition: .2s;
+    }
+
+    .nav-phone:hover { background: var(--primary-dark); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 84px 0 74px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(23,167,143,.18), transparent 38%),
+        radial-gradient(circle at 10% 80%, rgba(11,107,92,.12), transparent 42%),
+        linear-gradient(180deg, #ffffff 0%, #f2f9f7 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e7f6f2;
+      color: var(--primary-dark);
+      border: 1px solid #c9ebe3;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0 0 16px;
+      font-size: clamp(30px, 4.2vw, 50px);
+      line-height: 1.24;
+      letter-spacing: -.5px;
+      color: #102b26;
+    }
+
+    .hero h1 span { color: var(--primary); }
+
+    .slogan {
+      display: inline-block;
+      margin: 0 0 20px;
+      padding: 10px 18px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #fff7e6, #ffefcc);
+      border: 1px solid #f3d38a;
+      color: #8a5a00;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: .5px;
+    }
+
+    .hero p {
+      margin: 0 0 26px;
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 640px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: .2s;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 8px 20px rgba(11,107,92,.22);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--primary-dark);
+      border-color: #c9e3dd;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 390px;
+      border-radius: 28px;
+      background: linear-gradient(145deg, rgba(11,107,92,.97), rgba(23,167,143,.9));
+      box-shadow: 0 24px 60px rgba(11,107,92,.25);
+      padding: 30px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -70px;
+      top: -70px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.10);
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      left: -60px;
+      bottom: -60px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+    }
+
+    .visual-title {
+      position: relative;
+      z-index: 1;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      opacity: .85;
+    }
+
+    .visual-metrics {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 14px;
+    }
+
+    .metric {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 21px;
+      margin-bottom: 2px;
+    }
+
+    .metric span {
+      font-size: 13px;
+      opacity: .85;
+    }
+
+    .hero-phone {
+      position: relative;
+      z-index: 1;
+      margin-top: 18px;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .hero-phone small {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: .8;
+      letter-spacing: 0;
+      margin-bottom: 2px;
+    }
+
+    section { padding: 82px 0; }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 42px;
+    }
+
+    .section-head .eyebrow {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 14px;
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1.3;
+      color: #102b26;
+      letter-spacing: -.3px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .about-text p { margin: 0 0 16px; color: var(--muted); }
+
+    .about-points {
+      display: grid;
+      gap: 14px;
+    }
+
+    .point {
+      display: flex;
+      gap: 14px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: 0 4px 18px rgba(11,107,92,.05);
+    }
+
+    .point-icon {
+      flex: 0 0 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: #e7f6f2;
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
+    .point h4 { margin: 0 0 4px; font-size: 16px; }
+    .point p { margin: 0; font-size: 14px; color: var(--muted); }
+
+    .services {
+      background: white;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: #fbfefd;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px 24px;
+      transition: .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: #b8ddd5;
+    }
+
+    .service-num {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--primary);
+      color: white;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.45;
+      color: #12332d;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .promise {
+      background: linear-gradient(135deg, #fffaf0, #fff3d9);
+      border-top: 1px solid #f3e0b5;
+      border-bottom: 1px solid #f3e0b5;
+    }
+
+    .promise-box {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .promise-box .eyebrow {
+      color: #b07a00;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .promise-box h2 {
+      margin: 0 0 16px;
+      font-size: clamp(26px, 3.4vw, 42px);
+      color: #6d4600;
+      letter-spacing: .5px;
+    }
+
+    .promise-box p {
+      margin: 0;
+      color: #7a5a1a;
+      font-size: 17px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .process-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .process-step {
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      background: #e7f6f2;
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    .process-item h4 { margin: 0 0 8px; font-size: 16px; }
+    .process-item p { margin: 0; font-size: 14px; color: var(--muted); }
+
+    .strip {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: white;
+      padding: 46px 0;
+    }
+
+    .strip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .strip-item strong { display: block; font-size: 20px; margin-bottom: 4px; }
+    .strip-item span { font-size: 13.5px; opacity: .82; }
+
+    .contact { background: white; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .contact-info { display: grid; gap: 14px; }
+
+    .info-card {
+      background: #f8fcfb;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+    }
+
+    .info-card h4 {
+      margin: 0 0 4px;
+      font-size: 15px;
+      color: var(--primary-dark);
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14.5px;
+      word-break: break-all;
+    }
+
+    .phone-link {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: .5px;
+    }
+
+    form {
+      background: #f8fcfb;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #24433d;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #cfe3de;
+      border-radius: 10px;
+      font: inherit;
+      font-size: 14.5px;
+      background: white;
+      color: var(--text);
+      outline: none;
+      transition: .2s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(11,107,92,.10);
+    }
+
+    textarea { min-height: 120px; resize: vertical; }
+
+    .form-note { font-size: 12.5px; color: var(--muted); margin: 0; }
+
+    footer {
+      background: #0d2b26;
+      color: #cfe2de;
+      padding: 38px 0;
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-brand { font-weight: 800; color: white; font-size: 16px; margin-bottom: 6px; }
+    footer p { margin: 0; opacity: .75; }
+    footer a { color: #7fe0cc; font-weight: 700; }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid { grid-template-columns: 1fr; }
+
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .strip-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+      .hero-visual { min-height: 320px; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 60px 0; }
+      .hero { padding: 60px 0 54px; }
+      .service-grid,
+      .process-grid,
+      .strip-grid,
+      .form-row { grid-template-columns: 1fr; }
+
+      .nav-phone { display: none; }
+      .hero-actions .btn { width: 100%; }
+      .slogan { font-size: 16px; }
+      .hero-phone { font-size: 22px; }
+      .phone-link { font-size: 21px; }
+    }
+ </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href=" ">
+        <span class="logo-mark">瑄</span>
+        北京瑄鹏生物科技有限公司
+      </a >
+      <nav class="nav-links">
+        <a href="#about">关于我们</a >
+        <a href="#services">核心业务</a >
+        <a href="#promise">服务承诺</a >
+        <a href="#process">服务流程</a >
+        <a href="#contact">联系我们</a >
+      </nav>
+      <a class="nav-phone" href="tel:18801355849">📞 18801355849</a >
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">化合物检测 · 合成制备 · 工艺优化 · 制剂开发</div>
+          <h1>专注<span>化合物检测与医药研发</span>外包服务</h1>
+          <div class="slogan">价格同类超低，服务质量最高！</div>
+          <p>
+            北京瑄鹏生物科技有限公司承接化合物结构检测、解析及鉴定，纯度、含量、TGA、DSC、元素杂质、XRD 等检测，
+            医药化学中间体与杂质对照品制备，合成路线设计、工艺优化，以及高技术壁垒仿制药和复杂制剂开发。
+          </p >
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:18801355849">电话咨询 18801355849</a >
+            <a class="btn btn-outline" href="#services">查看核心业务</a >
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-title">ANALYTICAL · SYNTHESIS · FORMULATION</div>
+          <div class="visual-metrics">
+            <div class="metric">
+              <strong>结构解析与鉴定</strong>
+              <span>化合物结构检测、解析及鉴定服务</span>
+            </div>
+            <div class="metric">
+              <strong>多维度检测</strong>
+              <span>纯度、含量、TGA、DSC、元素杂质、XRD</span>
+            </div>
+            <div class="metric">
+              <strong>研发外包</strong>
+              <span>中间体、杂质对照品、路线设计与工艺优化</span>
+            </div>
+          </div>
+          <div class="hero-phone">
+            <small>服务咨询电话</small>
+            18801355849
+          </div>
+        </div>
+      </div>
+    </section>
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">About Us</div>
+      <h2>关于北京瑄鹏生物科技有限公司</h2>
+      <p>
+        公司聚焦医药化学与生物医药研发服务，围绕化合物检测分析、合成制备、工艺优化及制剂开发，
+        为医药企业、研发机构和相关客户提供专业化外包支持。
+      </p >
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          北京瑄鹏生物科技有限公司致力于为医药研发与生产环节提供化合物检测、解析鉴定、合成制备及工艺开发等服务。
+          业务覆盖从化合物结构确认、理化性质检测，到医药化学中间体、杂质对照品制备，再到合成路线设计、工艺优化、
+          仿制药与复杂制剂开发等多个环节。
+        </p >
+        <p>
+          公司以技术能力为核心，注重数据准确性、项目保密性和交付效率，可根据客户需求提供定制化研发外包方案，
+          助力客户降低研发成本、缩短开发周期、提升产品质量控制水平。
+        </p >
+        <p>
+          我们坚持“<strong>价格同类超低，服务质量最高！</strong>”的服务承诺，欢迎来电咨询：
+          <a href=" " style="color: var(--primary); font-weight: 800;">18801355849</a >
+        </p >
+      </div>
+      <div class="about-points">
+        <div class="point">
+          <div class="point-icon">检</div>
+          <div>
+            <h4>检测分析能力</h4>
+            <p>覆盖结构鉴定、纯度含量、热分析、元素杂质与 XRD 等多类检测需求。</p >
+          </div>
+        </div>
+        <div class="point">
+          <div class="point-icon">合</div>
+          <div>
+            <h4>合成制备能力</h4>
+            <p>承接医药化学中间体及杂质对照品制备等外包服务。</p >
+          </div>
+        </div>
+        <div class="point">
+          <div class="point-icon">研</div>
+          <div>
+            <h4>工艺与制剂开发</h4>
+            <p>提供合成路线设计、降本工艺优化、仿制药及复杂制剂开发支持。</p >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Core Services</div>
+      <h2>核心业务</h2>
+      <p>围绕化合物检测、合成制备、工艺优化与制剂开发，提供六类重点外包服务。</p >
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <div class="service-num">01</div>
+        <h3>化合物结构检测、解析及鉴定</h3>
+        <p>承接化合物结构检测、解析及鉴定服务，为化合物结构确认与质量研究提供数据支持。</p >
+      </article>
+      <article class="service-card">
+        <div class="service-num">02</div>
+        <h3>多维度理化检测</h3>
+        <p>承接化合物纯度、含量、TGA、DSC、元素杂质、XRD 等检测服务，满足不同研发与质控需求。</p >
+      </article>
+      <article class="service-card">
+        <div class="service-num">03</div>
+        <h3>中间体与杂质对照品制备</h3>
+        <p>承接医药化学中间体制备及杂质对照品制备外包服务，支持药物研发与质量研究。</p >
+      </article>
+      <article class="service-card">
+        <div class="service-num">04</div>
+        <h3>合成路线设计与工艺优化</h3>
+        <p>承接化合物合成路线设计，以及旨在降低生产成本的工艺优化技术改革服务。</p >
+      </article>
+      <article class="service-card">
+        <div class="service-num">05</div>
+        <h3>高技术壁垒仿制药开发</h3>
+        <p>承接高技术壁垒仿制药的开发工作，为仿制药研发提供技术支持与开发服务。</p >
+      </article>
+      <article class="service-card">
+        <div class="service-num">06</div>
+        <h3>复杂制剂开发</h3>
+        <p>承接复杂制剂的开发服务，围绕制剂研发需求提供定制化技术支持。</p >
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="promise" class="promise">
+  <div class="container promise-box">
+    <div class="eyebrow">OUR PROMISE</div>
+    <h2>价格同类超低，服务质量最高！</h2>
+    <p>
+      北京瑄鹏生物科技有限公司坚持以有竞争力的价格和高质量的交付服务客户。
+      欢迎来电咨询具体业务：<a href="tel:18801355849" style="color:#6d4600; font-weight:900;">18801355849</a >
+    </p >
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Workflow</div>
+      <h2>服务流程</h2>
+      <p>从需求沟通到方案交付，按项目需求提供清晰、可跟踪的服务流程。</p >
+    </div>
+    <div class="process-grid">
+      <div class="process-item">
+        <div class="process-step">1</div>
+        <h4>需求沟通</h4>
+        <p>了解检测、制备或开发目标，确认样品信息与技术需求。</p >
+      </div>
+      <div class="process-item">
+        <div class="process-step">2</div>
+        <h4>方案评估</h4>
+        <p>评估技术路线、检测方法、周期与交付内容，形成服务方案。</p >
+      </div>
+      <div class="process-item">
+        <div class="process-step">3</div>
+        <h4>项目实施</h4>
+        <p>按约定方案开展检测、制备、合成或开发工作，保持过程沟通。</p >
+      </div>
+      <div class="process-item">
+        <div class="process-step">4</div>
+        <h4>结果交付</h4>
+        <p>提交检测数据、样品或研发成果，并配合后续技术沟通。</p >
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="container strip-grid">
+    <div class="strip-item">
+      <strong>检测分析</strong>
+      <span>结构、纯度、含量、热分析、元素杂质、XRD</span>
+    </div>
+    <div class="strip-item">
+      <strong>合成制备</strong>
+      <span>医药化学中间体与杂质对照品</span>
+    </div>
+    <div class="strip-item">
+      <strong>工艺开发</strong>
+      <span>路线设计与降本工艺优化</span>
+    </div>
+    <div class="strip-item">
+      <strong>制剂开发</strong>
+      <span>高技术壁垒仿制药与复杂制剂</span>
+    </div>
+  </div>
+</div>
+ <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Contact</div>
+          <h2>联系我们</h2>
+          <p>如需检测、制备、合成路线设计、工艺优化或制剂开发服务，欢迎来电或提交需求。</p >
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-card">
+              <h4>公司名称</h4>
+              <p>北京瑄鹏生物科技有限公司</p >
+            </div>
+            <div class="info-card">
+              <h4>联系电话</h4>
+              <p><a class="phone-link" href=" ">18801355849</a ></p >
+            </div>
+            <div class="info-card">
+              <h4>服务承诺</h4>
+              <p>价格同类超低，服务质量最高！</p >
+            </div>
+            <div class="info-card">
+              <h4>业务范围</h4>
+              <p>化合物检测解析鉴定 · 理化检测 · 中间体与杂质对照品制备 · 合成路线设计与工艺优化 · 仿制药与复杂制剂开发</p >
+            </div>
+            <div class="info-card">
+              <h4>公司地址</h4>
+              <p>北京市（如需详细地址请电话咨询）</p >
+            </div>
+          </div>
+
+          <form id="contactForm">
+            <div class="form-row">
+              <div>
+                <label for="name">姓名</label>
+                <input id="name" name="name" type="text" placeholder="您的姓名" required />
+              </div>
+              <div>
+                <label for="phone">电话</label>
+                <input id="phone" name="phone" type="tel" placeholder="联系电话" required />
+              </div>
+            </div>
+            <div>
+              <label for="company">单位名称</label>
+              <input id="company" name="company" type="text" placeholder="公司 / 机构名称" />
+            </div>
+            <div>
+              <label for="service">需求类型</label>
+              <select id="service" name="service">
+                <option>化合物结构检测、解析及鉴定</option>
+                <option>纯度、含量、TGA、DSC、元素杂质、XRD 检测</option>
+                <option>医药化学中间体制备</option>
+                <option>杂质对照品制备</option>
+                <option>化合物合成路线设计</option>
+                <option>降低生产成本的工艺优化</option>
+                <option>高技术壁垒仿制药开发</option>
+                <option>复杂制剂开发</option>
+                <option>其他需求</option>
+              </select>
+            </div>
+            <div>
+              <label for="message">需求描述</label>
+              <textarea id="message" name="message" placeholder="请简要描述样品信息、检测项目、开发目标或合作需求"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">提交需求</button>
+            <p class="form-note" id="formNote">
+              提示：当前为前端演示表单，提交后不会真正发送。也可直接拨打
+              <a href="tel:18801355849" style="color: var(--primary); font-weight: 700;">18801355849</a > 联系我们。
+            </p >
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">北京瑄鹏生物科技有限公司</div>
+        <p>化合物检测 · 合成制备 · 工艺优化 · 制剂开发</p >
+        <p style="margin-top:6px;">价格同类超低，服务质量最高！</p >
+      </div>
+      <div style="text-align:right;">
+        <p>联系电话：<a href="tel:18801355849">18801355849</a ></p >
+        <p>© <span id="year"></span> 北京瑄鹏生物科技有限公司</p >
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const note = document.getElementById("formNote");
+      note.textContent = "已收到您的需求信息（演示）。正式上线时请接入后端接口或邮件服务，也可直接拨打 18801355849。";
+      note.style.color = "#0b6b5c";
+      note.style.fontWeight = "700";
+    });
+  </script>
+</body>
+</html>
